@@ -32,39 +32,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler (placeholder functionality)
-const projectForm = document.querySelector('.project-form');
-
-projectForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        companyName: document.getElementById('company-name').value,
-        contactEmail: document.getElementById('contact-email').value,
-        projectTitle: document.getElementById('project-title').value,
-        projectDescription: document.getElementById('project-description').value,
-        skillsRequired: document.getElementById('skills-required').value,
-        projectDuration: document.getElementById('project-duration').value,
-        budget: document.getElementById('budget').value,
-        expertLevel: document.getElementById('expert-level').value
-    };
-    
-    // Log form data (in a real app, this would be sent to a server)
-    console.log('Project submission:', formData);
-    
-    // Show success message
-    alert('Thank you for submitting your project! We will review it and match you with qualified experts shortly. You will receive a confirmation email at ' + formData.contactEmail);
-    
-    // Reset form
-    projectForm.reset();
-    
-    // Scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
 
 // Add animation on scroll
 const observerOptions = {
