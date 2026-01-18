@@ -2,7 +2,9 @@
 # SkillBridge
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](../../actions)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![HTML](https://img.shields.io/badge/HTML-%23E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-%231572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## What the Project Does
 
