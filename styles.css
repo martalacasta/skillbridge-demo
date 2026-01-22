@@ -19,6 +19,16 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+body.dark-mode {
+    --primary-color: #6366F1;
+    --primary-dark: #4F46E5;
+    --text-dark: #E5E7EB;
+    --text-light: #9CA3AF;
+    --bg-light: #1F2937;
+    --bg-white: #111827;
+    --border-color: #374151;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
@@ -104,6 +114,35 @@ header {
     background-color: var(--text-dark);
     margin: 3px 0;
     transition: 0.3s;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    transform: scale(1.05);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Hero Section */
@@ -296,7 +335,10 @@ section {
     line-height: 1.6;
 }
 
-/* Projects Section */
+/* Get Started Section */
+.get-started {
+    background-color: var(--bg-light);
+}
 .projects {
     background-color: var(--bg-light);
 }
@@ -432,6 +474,44 @@ section {
 
 .project-form button[type="submit"]:hover {
     background-color: var(--primary-dark);
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background-color: #D1FAE5;
+    color: #065F46;
+    border-left: 4px solid var(--secondary-color);
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.confirmation-message.show {
+    display: block;
+}
+
+.confirmation-message h4 {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.dark-mode .confirmation-message {
+    background-color: #064E3B;
+    color: #DCFCE7;
+    border-left-color: var(--secondary-color);
 }
 
 /* Footer */

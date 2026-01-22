@@ -1,4 +1,3 @@
-
 # SkillBridge
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](../../actions)
@@ -8,14 +7,15 @@
 
 ## What the Project Does
 
-SkillBridge is a lightweight, frontend-only web application that connects companies and individuals with vetted technical experts and students for short-term technical projects. The landing page showcases the platform's services, how it works, and example projects, providing a modern, responsive, and easy-to-navigate experience.
+SkillBridge is a lightweight, frontend-only web application that connects companies and individuals with vetted technical experts and students for short-term technical projects. The landing page showcases the platform's services, how it works, and example projects, providing a modern, responsive, and easy-to-navigate experience with interactive features.
 
 ## Why the Project Is Useful
 
 - **Showcases project opportunities**: Highlights real-world example projects and the value of short-term technical engagements.
-- **Modern, responsive design**: Works seamlessly on desktop and mobile devices.
+- **Modern, responsive design**: Works seamlessly on desktop and mobile devices with dark/light mode support.
 - **No backend required**: Easy to deploy as a static site for demos or informational purposes.
 - **Clear user journey**: Explains how SkillBridge matches users with technical talent.
+- **Interactive engagement**: Users can submit project ideas and customize their viewing experience.
 
 ## Key Features
 
@@ -23,8 +23,28 @@ SkillBridge is a lightweight, frontend-only web application that connects compan
 - Services overview (Expert Matching, Short-term Projects, Flexible Engagement)
 - Step-by-step "How It Works" guide
 - Example projects with tags and status
-- Responsive navigation and mobile menu
+- Responsive navigation with header anchor links for quick section access
+- **Light/Dark mode toggle** for comfortable viewing in any lighting condition
+- **"Get Started" project submission form** for users to submit project ideas
+- **Footer contact section** with links and contact information
+- Mobile-responsive menu
 - Clean, accessible UI with smooth scrolling and section highlighting
+
+## Features Overview
+
+### Navigation & Accessibility
+- **Header Anchor Navigation**: Click navigation links to smoothly scroll to different sections (Services, How It Works, Projects, Get Started).
+- **Mobile Menu**: Responsive hamburger menu for seamless mobile navigation.
+
+### Theme Customization
+- **Light/Dark Mode Toggle**: Located in the header, allows users to switch between light and dark themes based on preference. The theme preference is persisted across sessions.
+
+### Project Submission
+- **Get Started Form**: Users can submit project ideas directly through an interactive form, including project title, description, and preferred skills/technologies.
+
+### Footer
+- **Contact Section**: Provides multiple ways to connect including email, social media links, and location information.
+- **Quick Links**: Easy access to key sections and resources.
 
 ## How Users Can Get Started
 
@@ -53,8 +73,12 @@ SkillBridge is a lightweight, frontend-only web application that connects compan
 
 ### Usage Example
 
-- Browse the landing page to learn about SkillBridge's services and see example projects.
-- The site is static and does not require any backend or database setup.
+- **Browse the landing page**: Learn about SkillBridge's services and see example projects.
+- **Navigate sections**: Use the header navigation to jump between Services, How It Works, and Projects sections.
+- **Toggle theme**: Click the light/dark mode toggle in the header to switch between themes based on your preference.
+- **Submit a project**: Scroll to the "Get Started" section and fill out the project submission form to share your project idea.
+- **Contact**: Find contact information and social links in the footer to reach out to the SkillBridge team.
+- **Responsive design**: The site automatically adapts to mobile, tablet, and desktop screens with a responsive menu on smaller devices.
 
 ## Where Users Can Get Help
 

@@ -14,6 +14,14 @@ navLinks.forEach(link => {
     });
 });
 
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Update icon based on mode
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -32,6 +40,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Form submission handler
+const projectForm = document.getElementById('project-form');
+const confirmationMessage = document.getElementById('confirmation-message');
+
+projectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Show confirmation message
+    confirmationMessage.classList.add('show');
+
+    // Clear form fields
+    projectForm.reset();
+
+    // Scroll confirmation message into view
+    confirmationMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
 
 // Add animation on scroll
 const observerOptions = {
@@ -48,9 +72,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe service cards, project cards, and steps
+// Observe service cards, project cards, steps, and get-started form
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .project-card, .step');
+    const animateElements = document.querySelectorAll('.service-card, .project-card, .step, .project-form');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
