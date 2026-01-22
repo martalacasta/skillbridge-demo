@@ -32,6 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
 // Add animation on scroll
 const observerOptions = {
     threshold: 0.1,
@@ -46,137 +47,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
-
-// Seed example projects in localStorage if not present
-(function seedProjects() {
-    if (!localStorage.getItem('projects')) {
-        const exampleProjects = [
-            {
-                companyName: "Acme Corp",
-                email: "contact@acme.com",
-                skill: "Web Development",
-                description: "Build a responsive landing page for our new product launch, including contact form and newsletter signup.",
-                duration: 2,
-                budget: 1500
-            },
-            {
-                companyName: "DataWiz",
-                email: "info@datawiz.io",
-                skill: "Data Analysis",
-                description: "Analyze customer churn data and create a dashboard with actionable insights for our sales team.",
-                duration: 3,
-                budget: 2000
-            },
-            {
-                companyName: "MobileX",
-                email: "hello@mobilex.com",
-                skill: "Mobile App",
-                description: "Fix bugs and improve performance in our existing React Native iOS/Android app.",
-                duration: 1,
-                budget: 1000
-            },
-            {
-                companyName: "CloudOps",
-                email: "support@cloudops.net",
-                skill: "DevOps",
-                description: "Set up CI/CD pipelines for automated testing and deployment to AWS.",
-                duration: 2,
-                budget: 1800
-            },
-            {
-                companyName: "ML Insights",
-                email: "team@mlinsights.ai",
-                skill: "Machine Learning",
-                description: "Develop a sentiment analysis model for customer feedback using TensorFlow.",
-                duration: 4,
-                budget: 2500
-            }
-        ];
-        localStorage.setItem('projects', JSON.stringify(exampleProjects));
-    }
-})();
-
-// Render projects from localStorage into the UI
-function renderProjects() {
-    const grid = document.getElementById('projectsGrid');
-    if (!grid) return;
-    grid.innerHTML = '';
-    const projects = JSON.parse(localStorage.getItem('projects') || '[]');
-    if (!projects.length) {
-        grid.innerHTML = '<p style="text-align:center;color:var(--text-light)">No projects found.</p>';
-        return;
-    }
-    projects.forEach(project => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        card.innerHTML = `
-            <div class="project-header">
-                <span class="project-tag">${project.skill || ''}</span>
-                <span class="project-status completed">Completed</span>
-            </div>
-            <h3>${project.description.length > 40 ? project.description.slice(0, 40) + '...' : project.description}</h3>
-            <p>${project.description}</p>
-            <div class="project-meta">
-                <span class="project-duration">⏱ ${project.duration} week${project.duration > 1 ? 's' : ''}</span>
-                <span class="project-expert">👤 ${project.companyName}</span>
-                <span class="project-budget">💰 $${project.budget}</span>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
-}
-
-// Seed projects and render on DOMContentLoaded
-// Remove any previous IIFE or DOMContentLoaded for seeding/rendering
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (!localStorage.getItem('projects')) {
-        const exampleProjects = [
-            {
-                companyName: "Acme Corp",
-                email: "contact@acme.com",
-                skill: "Web Development",
-                description: "Build a responsive landing page for our new product launch, including contact form and newsletter signup.",
-                duration: 2,
-                budget: 1500
-            },
-            {
-                companyName: "DataWiz",
-                email: "info@datawiz.io",
-                skill: "Data Analysis",
-                description: "Analyze customer churn data and create a dashboard with actionable insights for our sales team.",
-                duration: 3,
-                budget: 2000
-            },
-            {
-                companyName: "MobileX",
-                email: "hello@mobilex.com",
-                skill: "Mobile App",
-                description: "Fix bugs and improve performance in our existing React Native iOS/Android app.",
-                duration: 1,
-                budget: 1000
-            },
-            {
-                companyName: "CloudOps",
-                email: "support@cloudops.net",
-                skill: "DevOps",
-                description: "Set up CI/CD pipelines for automated testing and deployment to AWS.",
-                duration: 2,
-                budget: 1800
-            },
-            {
-                companyName: "ML Insights",
-                email: "team@mlinsights.ai",
-                skill: "Machine Learning",
-                description: "Develop a sentiment analysis model for customer feedback using TensorFlow.",
-                duration: 4,
-                budget: 2500
-            }
-        ];
-        localStorage.setItem('projects', JSON.stringify(exampleProjects));
-    }
-    renderProjects();
-});
 
 // Observe service cards, project cards, and steps
 document.addEventListener('DOMContentLoaded', () => {
