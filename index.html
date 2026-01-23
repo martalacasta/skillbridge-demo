@@ -20,7 +20,10 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#get-started">Get Started</a></li>
                 </ul>
+                <button class="btn btn-primary nav-cta">Submit Project</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                     <span></span>
                     <span></span>
@@ -255,6 +258,59 @@
         </div>
     </section>
 
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <div class="get-started-content">
+                <h2 class="section-title">Get Started</h2>
+                <p class="section-subtitle">Submit your project and connect with the right expert</p>
+                <form id="projectForm" class="project-form">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skill">Skill Required</label>
+                        <select id="skill" name="skill" required>
+                            <option value="">Select a skill...</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="data-analysis">Data Analysis</option>
+                            <option value="cloud-infrastructure">Cloud Infrastructure</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="devops">DevOps</option>
+                            <option value="machine-learning">Machine Learning</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Project Description</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="duration">Duration (days)</label>
+                            <input type="number" id="duration" name="duration" min="1" max="365" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget ($)</label>
+                            <input type="number" id="budget" name="budget" min="0" step="100" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Submit Project</button>
+                </form>
+                <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                    <div class="confirmation-content">
+                        <h3>✓ Thank You!</h3>
+                        <p>Your project has been successfully submitted. We'll match you with the perfect expert soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -272,6 +328,14 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#submit">Get Started</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Want to Collaborate?</h4>
+                    <p>
+                        Interested in partnering or contributing? Check our
+                        <a href="https://github.com/martalacasta/skillbridge-demo/blob/main/README.md" target="_blank" rel="noopener">repository README</a>
+                        for more info and contact details.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>

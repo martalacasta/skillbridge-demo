@@ -14,6 +14,18 @@ navLinks.forEach(link => {
     });
 });
 
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Update button text based on mode
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggle.textContent = '☀️';
+    } else {
+        themeToggle.textContent = '🌙';
+    }
+});
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -78,4 +90,26 @@ window.addEventListener('scroll', () => {
             }
         }
     });
+});
+
+// Form submission handler
+const projectForm = document.getElementById('projectForm');
+const confirmationMessage = document.getElementById('confirmationMessage');
+
+projectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Show confirmation message
+    confirmationMessage.style.display = 'block';
+    
+    // Clear form fields
+    projectForm.reset();
+    
+    // Scroll to confirmation message
+    confirmationMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Auto-hide confirmation after 4 seconds
+    setTimeout(() => {
+        confirmationMessage.style.display = 'none';
+    }, 4000);
 });
