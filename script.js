@@ -79,3 +79,72 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Dark mode toggle
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Form submission
+const submitForm = document.getElementById('submitForm');
+const formMessage = document.getElementById('formMessage');
+
+submitForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Clear previous message
+    formMessage.textContent = '';
+    formMessage.classList.remove('success');
+    
+    // Get form data
+    const formData = new FormData(submitForm);
+    const company = formData.get('companyName');
+    const email = formData.get('email');
+    const skill = formData.get('skill');
+    const duration = formData.get('duration');
+    const budget = formData.get('budget');
+    const description = formData.get('description');
+    
+    // Simple validation
+    if (!company || !email || !skill || !duration || !budget || !description) {
+        formMessage.textContent = 'Please fill in all fields.';
+        formMessage.style.display = 'block';
+        formMessage.style.backgroundColor = '#FEE2E2';
+        formMessage.style.color = '#991B1B';
+        formMessage.style.borderColor = '#F87171';
+        if (document.body.classList.contains('dark-mode')) {
+            formMessage.style.backgroundColor = '#7F1D1D';
+            formMessage.style.color = '#FEE2E2';
+        }
+        return;
+    }
+    
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        formMessage.textContent = 'Please enter a valid email address.';
+        formMessage.style.display = 'block';
+        formMessage.style.backgroundColor = '#FEE2E2';
+        formMessage.style.color = '#991B1B';
+        formMessage.style.borderColor = '#F87171';
+        if (document.body.classList.contains('dark-mode')) {
+            formMessage.style.backgroundColor = '#7F1D1D';
+            formMessage.style.color = '#FEE2E2';
+        }
+        return;
+    }
+    
+    // Show success message
+    formMessage.textContent = 'Thank you! Your project has been submitted. We\'ll review it and match you with the right expert soon.';
+    formMessage.classList.add('success');
+    formMessage.style.display = 'block';
+    
+    // Clear form fields
+    submitForm.reset();
+    
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 5000);
+});
