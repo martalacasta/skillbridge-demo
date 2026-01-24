@@ -18,9 +18,13 @@
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#experts">Experts</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#projects">Projects</a></li>
                 </ul>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                     <span></span>
                     <span></span>
@@ -255,6 +259,58 @@
         </div>
     </section>
 
+    <!-- Get Started Section -->
+    <section id="submit" class="submit-form">
+        <div class="container">
+            <h2 class="section-title">Get Started</h2>
+            <p class="section-subtitle">Submit your project and we'll match you with the perfect expert</p>
+            <form class="project-form" id="projectForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="skill">Skill Required</label>
+                        <select id="skill" name="skill" required>
+                            <option value="">-- Select a skill --</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="backend">Backend Development</option>
+                            <option value="devops">DevOps</option>
+                            <option value="data-analysis">Data Analysis</option>
+                            <option value="machine-learning">Machine Learning</option>
+                            <option value="ui-design">UI/UX Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" id="duration" name="duration" placeholder="e.g., 2 weeks" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <input type="text" id="budget" name="budget" placeholder="e.g., $2000" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Project Description</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Submit Project</button>
+            </form>
+            <div id="confirmationMessage" class="confirmation-message"></div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -263,6 +319,14 @@
                 <div class="footer-section">
                     <h3>SkillBridge</h3>
                     <p>Connecting companies with technical talent for short-term projects.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contribute or Contact Us</h4>
+                    <p>
+                        Interested in collaborating or learning more? Visit our
+                        <a href="https://github.com/martalacasta/skillbridge-demo/blob/main/README.md" target="_blank" rel="noopener">GitHub README</a>
+                        for details on contributing, reporting issues, or getting in touch.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>

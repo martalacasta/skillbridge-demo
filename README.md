@@ -1,4 +1,3 @@
-
 # SkillBridge
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](../../actions)
@@ -8,23 +7,56 @@
 
 ## What the Project Does
 
-SkillBridge is a lightweight, frontend-only web application that connects companies and individuals with vetted technical experts and students for short-term technical projects. The landing page showcases the platform's services, how it works, and example projects, providing a modern, responsive, and easy-to-navigate experience.
+SkillBridge is a lightweight, frontend-only web application that connects companies and individuals with vetted technical experts and students for short-term technical projects. The landing page showcases the platform's services, how it works, and example projects, providing a modern, responsive, and easy-to-navigate experience with interactive features for project submission and theme customization.
 
 ## Why the Project Is Useful
 
 - **Showcases project opportunities**: Highlights real-world example projects and the value of short-term technical engagements.
-- **Modern, responsive design**: Works seamlessly on desktop and mobile devices.
+- **Modern, responsive design**: Works seamlessly on desktop and mobile devices with accessibility in mind.
+- **Interactive features**: Includes a project submission form and light/dark mode toggle for enhanced user experience.
 - **No backend required**: Easy to deploy as a static site for demos or informational purposes.
-- **Clear user journey**: Explains how SkillBridge matches users with technical talent.
+- **Clear user journey**: Explains how SkillBridge matches users with technical talent with intuitive navigation.
 
 ## Key Features
 
-- Hero section with project mission and call to action
-- Services overview (Expert Matching, Short-term Projects, Flexible Engagement)
-- Step-by-step "How It Works" guide
-- Example projects with tags and status
-- Responsive navigation and mobile menu
-- Clean, accessible UI with smooth scrolling and section highlighting
+- **Hero section** with project mission and call-to-action button
+- **Services overview** (Expert Matching, Short-term Projects, Flexible Engagement)
+- **Step-by-step "How It Works" guide** with visual progression
+- **Example projects** with tags, status badges, and detailed descriptions
+- **Project Submission Form** ("Get Started" section) - Users can submit new project ideas with title, description, and category selection
+- **Light/Dark Mode Toggle** - Theme switcher in the header for personalized viewing experience
+- **Header Anchor Navigation** - Smooth scrolling navigation linking to all major sections
+- **Footer Contact Section** - Links to social media and contact information
+- **Responsive navigation** with mobile menu support
+- **Clean, accessible UI** with semantic HTML and smooth interactions
+
+## Features in Detail
+
+### Project Submission Form
+The "Get Started" section allows users to submit project ideas directly from the landing page. The form includes:
+- Project title and description fields
+- Category selection dropdown
+- Form validation and user feedback
+- Responsive design for mobile and desktop
+
+### Light/Dark Mode Toggle
+Users can switch between light and dark themes using the toggle button in the header:
+- Preference is stored locally for persistent experience
+- Smooth transitions between themes
+- Optimized color schemes for readability in both modes
+
+### Header Navigation
+The header includes:
+- Smooth scrolling anchor links to all major sections (Services, How It Works, Projects, Get Started)
+- Active section highlighting as users scroll
+- Mobile-responsive hamburger menu
+- Theme toggle button
+
+### Footer Contact Section
+The footer provides:
+- Social media links and contact information
+- Quick access to company details
+- Professional presentation of organizational information
 
 ## How Users Can Get Started
 
@@ -53,8 +85,12 @@ SkillBridge is a lightweight, frontend-only web application that connects compan
 
 ### Usage Example
 
-- Browse the landing page to learn about SkillBridge's services and see example projects.
-- The site is static and does not require any backend or database setup.
+- **Browse the landing page** to learn about SkillBridge's services and see example projects
+- **Use the header navigation** to jump to specific sections and explore the content
+- **Toggle light/dark mode** using the button in the header for your preferred viewing experience
+- **Submit a project** using the "Get Started" form to see how users can contribute project ideas
+- **Contact us** using the links in the footer section
+- The site is static and does not require any backend or database setup
 
 ## Where Users Can Get Help
 

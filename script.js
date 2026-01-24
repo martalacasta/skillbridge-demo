@@ -79,3 +79,41 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Dark mode toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Update icon based on current theme
+    if (document.body.classList.contains('dark-mode')) {
+        themeIcon.textContent = '☀️';
+    } else {
+        themeIcon.textContent = '🌙';
+    }
+});
+
+// Form submission handler
+const projectForm = document.getElementById('projectForm');
+const confirmationMessage = document.getElementById('confirmationMessage');
+
+if (projectForm) {
+    projectForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Display confirmation message
+        confirmationMessage.textContent = '✓ Thank you! Your project has been submitted.';
+        confirmationMessage.classList.add('show');
+        
+        // Clear form fields after 2 seconds
+        setTimeout(() => {
+            projectForm.reset();
+        }, 2000);
+        
+        // Hide confirmation message after 5 seconds
+        setTimeout(() => {
+            confirmationMessage.classList.remove('show');
+        }, 5000);
+    });
+}
