@@ -79,3 +79,34 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Dark mode toggle
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Update button icon based on current mode
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = '🌙';
+    } else {
+        darkModeToggle.textContent = '☀️';
+    }
+});
+
+// Form submission handler
+const projectForm = document.getElementById('projectForm');
+const confirmationMessage = document.getElementById('confirmationMessage');
+
+projectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Clear form fields
+    projectForm.reset();
+    
+    // Show confirmation message
+    confirmationMessage.style.display = 'block';
+    
+    // Optional: Hide confirmation after 5 seconds
+    // setTimeout(() => {
+    //     confirmationMessage.style.display = 'none';
+    // }, 5000);
+});
