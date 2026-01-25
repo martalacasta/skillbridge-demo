@@ -19,7 +19,9 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#get-started">Get Started</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
                 </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                     <span></span>
@@ -173,6 +175,68 @@
         </div>
     </section>
 
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <h2>Get Started</h2>
+            <p class="section-subtitle">Submit your project and connect with expert technical talent</p>
+            
+            <div class="form-container">
+                <form id="projectForm" class="project-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="skill">Skill</label>
+                            <select id="skill" name="skill" required>
+                                <option value="">Select a skill...</option>
+                                <option value="frontend">Frontend Development</option>
+                                <option value="backend">Backend Development</option>
+                                <option value="fullstack">Full-Stack Development</option>
+                                <option value="devops">DevOps</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="data">Data Science</option>
+                                <option value="mobile">Mobile Development</option>
+                                <option value="cloud">Cloud Architecture</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <input type="text" id="duration" name="duration" placeholder="e.g., 2-3 months" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Budget</label>
+                            <input type="text" id="budget" name="budget" placeholder="e.g., $50k-100k" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="description">Project Description</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Project</button>
+                </form>
+                
+                <div id="confirmationMessage" class="confirmation-message hidden">
+                    ✓ Thank you! Your project has been submitted. We'll review it shortly.
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Example Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -270,8 +334,15 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#submit">Get Started</a></li>
+                        <li><a href="#get-started">Get Started</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Want to Reach Out?</h4>
+                    <p>
+                        For more information or to contact us directly, please see our
+                        <a href="https://github.com/martalacasta/skillbridge-demo/blob/main/README.md" target="_blank" rel="noopener">repository README</a>.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>

@@ -6,6 +6,36 @@ mobileMenuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
+// Theme toggle functionality
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+}
+
+// Project form submission
+const projectForm = document.getElementById('projectForm');
+const confirmationMessage = document.getElementById('confirmationMessage');
+
+if (projectForm) {
+    projectForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Clear any previous message
+        confirmationMessage.classList.remove('hidden');
+        
+        // Clear form fields
+        projectForm.reset();
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            confirmationMessage.classList.add('hidden');
+        }, 5000);
+    });
+}
+
 // Close mobile menu when clicking on a nav link
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
