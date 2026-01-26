@@ -79,3 +79,29 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Theme toggle functionality
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Form submission handler
+const projectForm = document.getElementById('project-form');
+const confirmationMessage = document.getElementById('confirmation-message');
+
+projectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Show confirmation message
+    confirmationMessage.style.display = 'flex';
+    
+    // Clear form fields
+    projectForm.reset();
+    
+    // Hide confirmation message after 5 seconds
+    setTimeout(() => {
+        confirmationMessage.style.display = 'none';
+    }, 5000);
+});
+
